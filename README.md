@@ -1,0 +1,2 @@
+# mentalia-psytest
+plugin
