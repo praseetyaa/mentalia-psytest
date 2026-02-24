@@ -1,0 +1,878 @@
+/* ===========================
+   Mentalia PsyTest Admin Styles
+   =========================== */
+
+/* Layout */
+.mentalia-admin {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.mentalia-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 24px;
+}
+
+.mentalia-title .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #764ba2;
+}
+
+/* Stats Grid */
+.mentalia-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.mentalia-stat-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mentalia-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+.stat-info h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    color: #1d2327;
+}
+
+.stat-info p {
+    margin: 2px 0 0;
+    color: #757575;
+    font-size: 13px;
+}
+
+/* Cards */
+.mentalia-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.mentalia-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mentalia-card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* Quick Links */
+.mentalia-quick-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.mentalia-quick-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #f0f0f1;
+    border-radius: 8px;
+    color: #1d2327;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.mentalia-quick-link:hover {
+    background: #764ba2;
+    color: #fff;
+}
+
+.mentalia-quick-link .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Tables */
+.mentalia-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mentalia-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background: #f6f7f7;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.mentalia-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.mentalia-table tbody tr:hover {
+    background: #f9f9fa;
+}
+
+.mentalia-row-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Badges */
+.mentalia-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mentalia-badge-published {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.mentalia-badge-draft {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.mentalia-badge-category {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Shortcodes */
+.mentalia-shortcode {
+    background: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px dashed #c3c4c7;
+    transition: all 0.2s;
+}
+
+.mentalia-shortcode:hover {
+    background: #764ba2;
+    color: #fff;
+    border-color: #764ba2;
+}
+
+.mentalia-shortcode-large {
+    display: inline-block;
+    background: #f6f7f7;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px dashed #c3c4c7;
+    transition: all 0.2s;
+}
+
+.mentalia-shortcode-large:hover {
+    background: #764ba2;
+    color: #fff;
+    border-color: #764ba2;
+}
+
+/* Action Buttons */
+.mentalia-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.mentalia-btn-small {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    text-decoration: none;
+    background: transparent;
+}
+
+.mentalia-btn-small .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.mentalia-btn-edit {
+    color: #1565c0;
+}
+
+.mentalia-btn-edit:hover {
+    background: #e3f2fd;
+}
+
+.mentalia-btn-questions {
+    color: #6a1b9a;
+}
+
+.mentalia-btn-questions:hover {
+    background: #f3e5f5;
+}
+
+.mentalia-btn-categories {
+    color: #00695c;
+}
+
+.mentalia-btn-categories:hover {
+    background: #e0f2f1;
+}
+
+.mentalia-btn-delete {
+    color: #c62828;
+}
+
+.mentalia-btn-delete:hover {
+    background: #ffebee;
+}
+
+/* Buttons */
+.mentalia-btn-primary {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border-color: #764ba2 !important;
+    border-radius: 8px !important;
+    padding: 6px 16px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s !important;
+}
+
+.mentalia-btn-primary:hover {
+    background: linear-gradient(135deg, #5a6fd6, #6a3f92) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(118, 75, 162, 0.3);
+}
+
+.mentalia-btn-primary .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.mentalia-btn-secondary {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px !important;
+}
+
+.mentalia-btn-save {
+    font-size: 14px !important;
+    padding: 8px 24px !important;
+}
+
+/* Forms */
+.mentalia-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.mentalia-full-width {
+    grid-column: 1 / -1;
+}
+
+.mentalia-form-group {
+    margin-bottom: 4px;
+}
+
+.mentalia-form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.mentalia-form-group input[type="text"],
+.mentalia-form-group input[type="number"],
+.mentalia-form-group input[type="email"],
+.mentalia-form-group textarea,
+.mentalia-form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.mentalia-form-group input:focus,
+.mentalia-form-group textarea:focus,
+.mentalia-form-group select:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 2px rgba(118, 75, 162, 0.15);
+    outline: none;
+}
+
+.mentalia-form-group .required {
+    color: #c62828;
+}
+
+.mentalia-help {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.mentalia-checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500 !important;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.mentalia-form-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f1;
+    margin-top: 16px;
+}
+
+/* Empty State */
+.mentalia-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.mentalia-empty-state .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    margin-bottom: 16px;
+}
+
+.mentalia-empty-state h3 {
+    margin: 0 0 8px;
+    color: #1d2327;
+}
+
+.mentalia-empty-state p {
+    color: #757575;
+    margin: 0 0 20px;
+}
+
+/* Loading */
+.mentalia-loading {
+    text-align: center;
+    padding: 40px;
+    color: #757575;
+}
+
+/* Pagination */
+.mentalia-pagination {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    padding: 20px 0 0;
+}
+
+.mentalia-page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1d2327;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.mentalia-page-link:hover {
+    background: #f0f0f1;
+}
+
+.mentalia-page-link.active {
+    background: #764ba2;
+    color: #fff;
+}
+
+/* Question Items */
+.mentalia-question-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background: #fff;
+    transition: box-shadow 0.2s;
+}
+
+.mentalia-question-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f9f9fa;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #f0f0f1;
+    cursor: pointer;
+}
+
+.question-drag-handle {
+    cursor: grab;
+    color: #999;
+}
+
+.question-drag-handle:active {
+    cursor: grabbing;
+}
+
+.question-number {
+    font-weight: 600;
+    color: #1d2327;
+    font-size: 14px;
+}
+
+.question-type-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #e3f2fd;
+    color: #1565c0;
+    font-weight: 500;
+}
+
+.question-header .mentalia-btn-small {
+    margin-left: auto;
+}
+
+.question-header .mentalia-btn-small:first-of-type {
+    margin-left: auto;
+}
+
+.question-body {
+    padding: 16px;
+}
+
+.question-body.collapsed {
+    display: none;
+}
+
+/* Options */
+.options-container {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f9f9fa;
+    border-radius: 8px;
+}
+
+.options-container>label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #1d2327;
+}
+
+.mentalia-option-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.mentalia-option-item .opt-text {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.mentalia-option-item .opt-score {
+    width: 80px;
+    padding: 6px 10px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.options-container .btn-add-option {
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+/* Likert Settings */
+.likert-settings {
+    margin-top: 12px;
+    padding: 12px;
+    background: #fff3e0;
+    border-radius: 8px;
+    border: 1px solid #ffe0b2;
+}
+
+/* Category Items */
+.mentalia-category-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f9f9fa;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.category-color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.category-label-preview {
+    font-weight: 600;
+    font-size: 14px;
+    flex: 1;
+}
+
+.category-body {
+    padding: 16px;
+}
+
+/* Result Detail */
+.mentalia-result-summary {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.mentalia-result-info-grid {
+    flex: 1;
+    min-width: 250px;
+}
+
+.result-info-item {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.result-info-item .label {
+    font-weight: 600;
+    color: #757575;
+    min-width: 100px;
+    font-size: 13px;
+}
+
+.result-info-item .value {
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.mentalia-score-display {
+    text-align: center;
+    padding: 20px;
+}
+
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #764ba2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    background: linear-gradient(135deg, #f5f5f5, #fff);
+}
+
+.score-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1;
+}
+
+.score-max {
+    font-size: 14px;
+    color: #999;
+}
+
+.score-category {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.score-interpretation {
+    max-width: 300px;
+    font-size: 13px;
+    color: #757575;
+    line-height: 1.5;
+}
+
+/* Header Actions */
+.mentalia-header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mentalia-filter-form {
+    display: inline-flex;
+}
+
+.mentalia-filter-form select {
+    padding: 6px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Shortcode info card */
+.mentalia-shortcode-info {
+    background: linear-gradient(135deg, #f5f5f5, #fff);
+    border-left: 4px solid #764ba2;
+}
+
+/* Toast Notifications */
+.mentalia-toast {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    padding: 14px 24px;
+    background: #1d2327;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 999999;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: mentalia-slide-in 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mentalia-toast.success {
+    background: #2e7d32;
+}
+
+.mentalia-toast.error {
+    background: #c62828;
+}
+
+@keyframes mentalia-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Import Dropzone */
+.mentalia-dropzone {
+    border: 2px dashed #c3c4c7;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f9f9fa;
+}
+
+.mentalia-dropzone:hover {
+    border-color: #764ba2;
+    background: #faf5ff;
+}
+
+.mentalia-dropzone.dragover {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+    transform: scale(1.01);
+}
+
+.dropzone-content .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    display: block;
+    margin: 0 auto 12px;
+    transition: color 0.3s;
+}
+
+.mentalia-dropzone:hover .dropzone-content .dashicons {
+    color: #764ba2;
+}
+
+.dropzone-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+    margin: 0 0 4px;
+}
+
+.dropzone-subtitle {
+    font-size: 13px;
+    color: #999;
+    margin: 0;
+}
+
+/* File Info */
+.mentalia-file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f0f0f1;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.mentalia-file-info .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #764ba2;
+}
+
+.mentalia-file-info .file-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.mentalia-file-info .file-size {
+    font-size: 12px;
+    color: #999;
+}
+
+.mentalia-file-info .btn-remove-file {
+    margin-left: auto;
+}
+
+/* Preview Summary */
+.mentalia-preview-summary {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Import Result Grid */
+.mentalia-import-result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .mentalia-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mentalia-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mentalia-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mentalia-result-summary {
+        flex-direction: column;
+    }
+
+    .mentalia-import-result-grid {
+        grid-template-columns: 1fr;
+    }
+}

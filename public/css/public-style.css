@@ -1,0 +1,639 @@
+/* ==============================
+   Mentalia PsyTest Frontend Styles
+   ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.mentalia-test-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    color: #1d2327;
+    line-height: 1.6;
+}
+
+.mentalia-test-wrapper * {
+    box-sizing: border-box;
+}
+
+/* Error */
+.mentalia-error {
+    background: #fff5f5;
+    color: #c62828;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #ffcdd2;
+    font-size: 14px;
+}
+
+/* ===== Intro Screen ===== */
+.mentalia-test-intro {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+}
+
+.mentalia-test-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.mentalia-test-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d2327;
+    margin: 0 0 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mentalia-test-desc {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.mentalia-test-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    background: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 24px;
+}
+
+.meta-item svg {
+    color: #764ba2;
+}
+
+/* Instructions */
+.mentalia-instructions {
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border: 1px solid #ddd6fe;
+}
+
+.mentalia-instructions h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5b21b6;
+}
+
+.mentalia-instructions div {
+    font-size: 14px;
+    color: #4c1d95;
+    line-height: 1.7;
+}
+
+/* Guest Info */
+.mentalia-guest-info {
+    margin-bottom: 24px;
+}
+
+.mentalia-guest-info h4 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.mentalia-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.mentalia-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s;
+    background: #fff;
+}
+
+.mentalia-input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+    outline: none;
+}
+
+/* Buttons */
+.mentalia-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.mentalia-btn-start {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 17px;
+    padding: 16px;
+}
+
+.mentalia-btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(118, 75, 162, 0.35);
+}
+
+.mentalia-btn-next,
+.mentalia-btn-submit {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+.mentalia-btn-next:hover,
+.mentalia-btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(118, 75, 162, 0.3);
+}
+
+.mentalia-btn-prev {
+    background: #f5f5f5;
+    color: #1d2327;
+}
+
+.mentalia-btn-prev:hover {
+    background: #e5e5e5;
+}
+
+.mentalia-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== Progress Bar ===== */
+.mentalia-progress {
+    background: #f0f0f0;
+    border-radius: 20px;
+    height: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mentalia-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    position: relative;
+}
+
+.mentalia-progress-text {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Timer */
+.mentalia-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #f9fafb;
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mentalia-timer.warning {
+    color: #dc2626;
+    background: #fef2f2;
+    animation: timer-pulse 1s infinite;
+}
+
+@keyframes timer-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* ===== Question Card ===== */
+.mentalia-test-questions {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+}
+
+.mentalia-question {
+    animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-counter {
+    font-size: 13px;
+    font-weight: 600;
+    color: #764ba2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d2327;
+    margin: 0 0 24px;
+    line-height: 1.5;
+}
+
+/* Multiple Choice & True/False Options */
+.mentalia-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mentalia-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s;
+    background: #fff;
+}
+
+.mentalia-option:hover {
+    border-color: #c4b5fd;
+    background: #faf5ff;
+}
+
+.mentalia-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.mentalia-option input[type="radio"]:checked {
+    border-color: #764ba2;
+    background: #764ba2;
+}
+
+.mentalia-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mentalia-option.selected {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+    box-shadow: 0 2px 8px rgba(118, 75, 162, 0.12);
+}
+
+.option-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.4;
+}
+
+/* Likert Scale */
+.mentalia-likert {
+    padding: 8px 0;
+}
+
+.likert-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.likert-scale {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.likert-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.likert-item input[type="radio"] {
+    display: none;
+}
+
+.likert-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+    transition: all 0.25s;
+    background: #fff;
+}
+
+.likert-item:hover .likert-circle {
+    border-color: #c4b5fd;
+    background: #faf5ff;
+    color: #764ba2;
+}
+
+.likert-item input[type="radio"]:checked+.likert-circle {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+    transform: scale(1.1);
+}
+
+/* Essay */
+.mentalia-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s;
+    min-height: 100px;
+    background: #fff;
+}
+
+.mentalia-textarea:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+    outline: none;
+}
+
+/* Navigation */
+.mentalia-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+    gap: 12px;
+}
+
+.mentalia-btn-submit {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.mentalia-btn-submit:hover {
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+/* Validation error */
+.mentalia-question.has-error .question-text {
+    color: #dc2626;
+}
+
+.mentalia-question.has-error .question-text::after {
+    content: ' (Wajib dijawab)';
+    font-size: 13px;
+    font-weight: 500;
+    color: #dc2626;
+}
+
+/* ===== Result Display ===== */
+.mentalia-test-result {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
+
+.result-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-icon svg {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    stroke: #fff;
+}
+
+.result-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d2327;
+    margin: 0 0 8px;
+}
+
+.result-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin: 0 0 28px;
+}
+
+.result-score-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+    padding: 24px 40px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    border: 1px solid #ddd6fe;
+}
+
+.result-score-value {
+    font-size: 48px;
+    font-weight: 800;
+    color: #5b21b6;
+    line-height: 1;
+}
+
+.result-score-label {
+    font-size: 14px;
+    color: #7c3aed;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.result-category {
+    margin-bottom: 24px;
+}
+
+.result-category-badge {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.result-category-desc {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.mentalia-btn-print {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.mentalia-btn-print:hover {
+    background: #e5e7eb;
+}
+
+.mentalia-btn-retake {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+
+    .mentalia-test-intro,
+    .mentalia-test-questions,
+    .mentalia-test-result {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .mentalia-test-title {
+        font-size: 22px;
+    }
+
+    .question-text {
+        font-size: 17px;
+    }
+
+    .mentalia-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .likert-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .likert-scale {
+        gap: 8px;
+    }
+
+    .result-score-value {
+        font-size: 40px;
+    }
+
+    .mentalia-nav {
+        flex-direction: column;
+    }
+
+    .mentalia-nav .mentalia-btn {
+        width: 100%;
+    }
+}
